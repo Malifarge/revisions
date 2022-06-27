@@ -52,3 +52,19 @@ const countEach = (stringXO) => {
 
 countEach("xxxoooox")
 countEach("xox")
+
+// 03 - Palindrome
+
+const isPalindrome = (stringPalindrom) => {
+    const stringArray = stringPalindrom.split("")
+    const inverseArray = stringArray.reverse()
+    const inverseString = inverseArray.join("")
+    if (inverseString === stringPalindrom){
+        console.log("Palindrome !");
+    }else {
+        console.log("Nope");
+    }
+}
+
+isPalindrome("racecar")
+isPalindrome("laptop")
