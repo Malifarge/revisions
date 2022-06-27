@@ -25,8 +25,8 @@ const sortLetters = (string) => {
 }
 
 sortLetters("konexio")
-sortLetters("Thomas")
-sortLetters("dopzbab")
+sortLetters("ThoMAs")
+sortLetters("doPzbAb")
 
 // 02 - XOXO
 
@@ -85,3 +85,19 @@ const swap = (stringSwap) => {
 }
 
 swap ("Hello World")
+
+// 05 - Sponge bob
+
+const makeItSpongeBob = (stringAlt) =>{
+    const arrayAlt = stringAlt.split("")
+    for (i=0; i < arrayAlt.length; i += 2){
+        arrayAlt[i] = arrayAlt[i].toUpperCase()
+    }
+    for (i=1; i< arrayAlt.length; i += 2){
+        arrayAlt[i] = arrayAlt[i].toLowerCase()
+    }
+    const stringAlterne = arrayAlt.join("")
+    console.log(stringAlterne);
+}
+
+makeItSpongeBob("Javascript is easy")
