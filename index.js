@@ -27,3 +27,28 @@ const sortLetters = (string) => {
 sortLetters("konexio")
 sortLetters("Thomas")
 sortLetters("dopzbab")
+
+// 02 - XOXO
+
+const countEach = (stringXO) => {
+    const stringXOArray = stringXO.split("")
+    const ArrayX = []
+    const ArrayO = []
+    for (i=0; i < stringXOArray.length;i++){
+        if (stringXOArray[i]=== "x"){
+            ArrayX.push(stringXOArray[i])
+        }else {
+            ArrayO.push(stringXOArray[i])
+        }
+    }
+
+    if (ArrayX.length === ArrayO.length){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+
+}
+
+countEach("xxxoooox")
+countEach("xox")
