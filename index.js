@@ -68,3 +68,20 @@ const isPalindrome = (stringPalindrom) => {
 
 isPalindrome("racecar")
 isPalindrome("laptop")
+
+// 04 - Swap
+
+const swap = (stringSwap) => {
+    const arraySwap = stringSwap.split("")
+    for (i=0; i < arraySwap.length;i++){
+        if (arraySwap[i] === arraySwap[i].toUpperCase()){
+            arraySwap[i] = arraySwap[i].toLowerCase()
+        }else {
+            arraySwap[i] = arraySwap[i].toUpperCase()
+        }
+    }
+    const stringSwapinverse = arraySwap.join("")
+    console.log(stringSwapinverse);
+}
+
+swap ("Hello World")
