@@ -31,18 +31,23 @@ sortLetters("doPzbAb")
 // 02 - XOXO
 
 const countEach = (stringXO) => {
-    const stringXOArray = stringXO.split("")
+    stringXOEqual= stringXO.toLowerCase()
+    const stringXOArray = stringXOEqual.split("")
     const ArrayX = []
     const ArrayO = []
-    for (i=0; i < stringXOArray.length;i++){
-        if (stringXOArray[i]=== "x"){
-            ArrayX.push(stringXOArray[i])
-        }else {
-            ArrayO.push(stringXOArray[i])
+    let errors = false
+    for (j=0; j < stringXOArray.length;j++){
+        if (stringXOArray[j]=== "x"){
+            ArrayX.push(stringXOArray[j])
+        }else if (stringXOArray[j] === "o"){
+            ArrayO.push(stringXOArray[j])
+        }else{
+            errors = true
         }
     }
-
-    if (ArrayX.length === ArrayO.length){
+    if (errors){
+        console.log("Only 'x' and 'o' accepted");
+    }else if (ArrayX.length === ArrayO.length){
         console.log("true");
     }else{
         console.log("false");
@@ -50,6 +55,8 @@ const countEach = (stringXO) => {
 
 }
 
+countEach("xoXoXO")
+countEach("journal")
 countEach("xxxoooox")
 countEach("xox")
 
